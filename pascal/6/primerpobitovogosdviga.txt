@@ -1,0 +1,50 @@
+Логические операции
+
+program LogOps;
+var
+  a, b, result: Integer;
+
+begin
+  a := 10; // 1010 в двоичном
+  b := 5;  // 0101 в двоичном
+
+  // AND (и)
+  result := a AND b; // 0000 (0 в десятичном) - логическое И
+  writeln('AND:', result);
+
+  // OR (или)
+  result := a OR b;  // 1111 (15 в десятичном) - логическое ИЛИ
+  writeln('OR:', result);
+
+  // XOR (исключающее ИЛИ)
+  result := a XOR b; // 1111 (15 в десятичном) - исключающее ИЛИ
+  writeln('XOR:', result);
+
+  // NOT (не)
+  result := NOT b; // 1010 (10 в десятичном) - NOT (отрицание)
+  writeln('NOT:', result);
+
+  // Проверка с использованием NOT
+  if (NOT (a AND b) ) then
+  begin
+      writeln('AND(a,b) не равно True (1)');
+  end;
+end.
+
+Битовые сдвиги
+
+program ShiftOps;
+var
+  a, result: Integer;
+
+begin
+  a := 5; // 0101 в двоичном
+
+  // Сдвиг влево (<<) - умножение на 2
+  result := a Shl 1; // 1010 (10 в десятичном) - умножение на 2
+  writeln('Сдвиг влево:', result);
+
+  // Сдвиг вправо (>>) - деление на 2
+  result := a Shr 1; // 0010 (2 в десятичном) - деление на 2
+  writeln('Сдвиг вправо:', result);
+end.
